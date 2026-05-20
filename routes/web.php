@@ -2,9 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PegawaiDBController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listpertemuan');
 });
 
 Route::get('halo', function () {
@@ -20,6 +23,14 @@ Route::get('pert5', function () {
 
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
+Route::get('pegawai', [PegawaiDBController::class, 'pertemuan12']);
+Route::get('/pegawailama/{nama}', [PegawaiController::class, 'index']);
+Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
+//blog
+Route::get('/blog', [BlogController::class, 'home']);
+Route::get('/blog/tentang', [BlogController::class, 'tentang']);
+Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
 Route::get('pert1', function () {
 	return view('pertemuan1');
@@ -51,4 +62,7 @@ Route::get('pert6', function () {
 
 Route::get('index', function () {
 	return view('index');
+});
+Route::get('tugas_ets', function () {
+	return view('tugas_ets');
 });
