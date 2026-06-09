@@ -10,9 +10,9 @@
     <div class="container mt-3">
         <h2></h2>
         <div class="mt-4 p-5 bg-primary text-white rounded">
-            @yield('judul')
+
             <h1>5026241146 Fabio Andrea Liui</h1>
-            <p>Data Pegawai</p>
+            <p>@yield('judul')</p>
         </div>
         <br>
         <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
@@ -22,7 +22,7 @@
                     <a class="nav-link" href="/pegawai">Pegawai</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nama Tabel PR</a>
+                    <a class="nav-link" href="/ikan">PR Ikan</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Siswa</a>

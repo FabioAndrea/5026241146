@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\dbIkan;
 
 Route::get('/', function () {
     return view('listpertemuan');
@@ -28,7 +29,14 @@ Route::get('template', function () {
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
 
-
+//crud tabel ikan
+Route::get('ikan', [dbIkan::class, 'index']);
+Route::get('ikan/tambah', [dbIkan::class, 'tambah']);
+Route::post('ikan/store', [dbIkan::class, 'store']);
+Route::get('ikan/edit/{id}', [dbIkan::class, 'edit']);
+Route::post('ikan/update', [dbIkan::class, 'update']);
+Route::get('ikan/hapus/{id}', [dbIkan::class, 'hapus']);
+Route::get('/ikan/cari', [dbIkan::class, 'cari']);
 
 //crud tabel pegawai
 Route::get('pegawai', [PegawaiDBController::class, 'pertemuan12']);
