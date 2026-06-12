@@ -13,7 +13,7 @@
     <div class="container">
         <div class="mt-4 p-5 bg-primary text-white rounded">
             <h3>5026241146 Fabio Andrea Liui</h3>
-            <h6>@yield('title')</h6>
+            <h6>@yield('judul')</h6>
         </div>
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
             <div class="container-fluid">
@@ -25,13 +25,16 @@
                         <a class="nav-link" href="/ikan">Ikan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 2</a>
+                        <a class="nav-link active" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 3</a>
+                        <a class="nav-link" href="/d4">D4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">EAS</a>
+                        <a class="nav-link" href="/e5">E5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/eas">EAS</a>
                     </li>
 
                 </ul>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+//wajib untuk import DB dan Rule
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 

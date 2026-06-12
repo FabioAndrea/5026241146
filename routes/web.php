@@ -7,6 +7,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\dbIkan;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\keranjangbelanja;
+use App\Http\Controllers\nilaikuliah;
 
 Route::get('/', function () {
     return view('listpertemuan');
@@ -38,6 +40,19 @@ Route::get('ikan/edit/{id}', [dbIkan::class, 'edit']);
 Route::post('ikan/update', [dbIkan::class, 'update']);
 Route::get('ikan/hapus/{id}', [dbIkan::class, 'hapus']);
 Route::get('/ikan/cari', [dbIkan::class, 'cari']);
+//e5
+Route::get('e5', [nilaikuliah::class, 'index']);
+Route::get('e5/tambah', [nilaikuliah::class, 'tambah']);
+Route::post('e5/store', [nilaikuliah::class, 'store']);
+Route::get('e5/edit/{id}', [nilaikuliah::class, 'edit']);
+Route::post('e5/update', [nilaikuliah::class, 'update']);
+Route::get('e5/hapus/{id}', [nilaikuliah::class, 'hapus']);
+Route::get('/e5/cari', [nilaikuliah::class, 'cari']);
+//d4
+Route::get('d4', [keranjangbelanja::class, 'index']);
+Route::get('d4/tambah', [keranjangbelanja::class, 'beli']);
+Route::post('d4/store', [keranjangbelanja::class, 'store']);
+Route::get('d4/hapus/{id}', [keranjangbelanja::class, 'hapus']);
 
 //crud tabel pegawai
 Route::get('pegawai', [PegawaiDBController::class, 'pertemuan12']);
