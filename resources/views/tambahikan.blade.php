@@ -7,7 +7,7 @@
         <div class="card-header">
             Form Tambah Data Ikan
         </div>
-
+        <!-- Form sudah di makeover seperti pegawai -->
         <div class="card-body">
             <form action="/ikan/store" method="post">
                 {{ csrf_field() }}

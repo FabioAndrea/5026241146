@@ -5,7 +5,7 @@
     <div class="container mt-5">
 
         <div class="mb-4">
-            
+
             <h3>Edit Ikan</h3>
         </div>
 
@@ -16,7 +16,7 @@
                 <div class="card-header">
                     Form Edit Data Ikan
                 </div>
-
+                <!-- Form sudah di makeover seperti pegawai -->
                 <div class="card-body">
                     <form action="/ikan/update" method="post">
                         {{ csrf_field() }}

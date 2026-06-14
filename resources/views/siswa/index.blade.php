@@ -7,9 +7,11 @@
     @if (session('success'))
         <p style="color: green;">{{ session('success') }}</p>
     @endif
+    @if (session('danger'))
+        <p style="color: red;">{{ session('danger') }}</p>
+    @endif
 
-    <a href="{{ route('siswa.create') }}">Tambah Siswa</a>
-
+    <a href="{{ route('siswa.create') }}" class="btn btn-primary"> + Tambah Siswa Baru</a>
     <br><br>
 
     <table class="table table-striped table-hover">

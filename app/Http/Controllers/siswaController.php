@@ -80,6 +80,6 @@ class SiswaController extends Controller
     {
         DB::table('siswa')->where('NRP', $nrp)->delete();
 
-        return redirect()->route('siswa.index')->with('success', 'Data siswa berhasil dihapus.');
+        return redirect()->route('siswa.index')->with('danger', 'Data siswa berhasil dihapus.');
     }
 }
